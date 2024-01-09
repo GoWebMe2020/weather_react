@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function useWeatherData(city, country) {
@@ -27,7 +27,7 @@ function useWeatherData(city, country) {
     };
 
     fetchWeatherData();
-  }, [city, country]);
+  }, [city, country, apiKey]);
 
   return { weather, loading, error };
 }

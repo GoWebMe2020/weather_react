@@ -27,7 +27,9 @@ function CurrentWeatherLocation() {
           const locationResponse = await axios.get('http://ip-api.com/json/');
           setCity(locationResponse.data.city);
           setCountry(locationResponse.data.countryCode);
-          toast.success(`You are viewing the weather for ${city}.`);
+          if (city) {
+            toast.success(`You are viewing the weather for ${city}.`);
+          }
         } catch (error) {
           console.error('Error fetching the location:', error);
         }
@@ -35,7 +37,7 @@ function CurrentWeatherLocation() {
 
       getLocation();
     }
-  }, []);
+  }, [city, country]);
 
   // Update cities list when country changes
   useEffect(() => {
