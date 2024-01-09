@@ -17,7 +17,7 @@ This React Weather App is an interactive web application that provides real-time
 
 1. Clone the repository:
 ```bash
-  $ git clone https://github.com/your-username/your-repo-name.git
+  $ git clone https://github.com/your-username/weather_react.git
 ```
 2. Navigate to the project directory:
 ```bash
@@ -39,6 +39,10 @@ This React Weather App is an interactive web application that provides real-time
   $ npm start
 ```
 This runs the app in development mode. Open http://localhost:3000 to view it in the browser.
+
+## Images
+
+![Image 09-01-2024 at 11 17](https://github.com/GoWebMe2020/weather_react/assets/63963827/cadc4e6c-3419-4137-9c83-a8c2c4429fdd)
 
 ## Usage
 
