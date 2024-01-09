@@ -13,6 +13,7 @@ function CurrentWeatherLocation() {
   const [country, setCountry] = useState("");
   const [cities, setCities] = useState([]);
 
+  // Fetch user's location on component mount
   useEffect(() => {
     const savedCity = localStorage.getItem('city');
     const savedCountry = localStorage.getItem('country');
@@ -36,10 +37,12 @@ function CurrentWeatherLocation() {
     }
   }, []);
 
+  // Update cities list when country changes
   useEffect(() => {
     setCities(countryCities[country] || []);
   }, [country]);
 
+  // Handlers for form elements
   const handleCountryChange = (e) => {
     setCountry(e.target.value);
     setCity('');

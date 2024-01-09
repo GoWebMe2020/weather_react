@@ -3,13 +3,14 @@ import useWeatherData from '../utils/useWeatherData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWind } from '@fortawesome/free-solid-svg-icons';
 import { faLocationArrow } from '@fortawesome/free-solid-svg-icons';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { roundOffNum, allCaps } from '../utils/utils';
 import './WeatherDisplay.css';
 
 function Weather({ city, country }) {
   const { weather, loading, error } = useWeatherData(city, country);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p><FontAwesomeIcon className='spinner' icon={faSpinner} spin /></p>;
   if (error) return <p>Error fetching weather data.</p>;
 
   const windDirectionStyle = {
@@ -72,4 +73,4 @@ function Weather({ city, country }) {
   )
 }
 
-export default Weather
+export default Weather;

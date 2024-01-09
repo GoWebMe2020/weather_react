@@ -148,3 +148,8 @@ hr {
   width: 20%;
   height: 50%;
 }
+
+.spinner {
+  position: absolute;
+  font-size: 40px;
+}
